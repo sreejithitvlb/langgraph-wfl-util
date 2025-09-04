@@ -5,11 +5,19 @@ description = "Default template for PDM package"
 authors = [
     {name = "sreejithitvlb", email = "sreejithitvlb@gmail.com"},
 ]
-dependencies = ["networkx>=3.5", "matplotlib>=3.10.6"]
-requires-python = "==3.13.*"
+dependencies = [
+    "networkx>=3.0,<4",
+    "pydot>=1.4,<2",
+]
+requires-python = ">=3.10"
 readme = "README.md"
 license = {text = "MIT"}
 
+[project.optional-dependencies]
+viz = [
+    "matplotlib>=3.7,<4",
+    "pygraphviz>=1.11,<2",
+]
 
 [tool.pdm]
 distribution = false
